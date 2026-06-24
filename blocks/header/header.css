@@ -1,6 +1,6 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: var(--color-maroon);
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -19,6 +19,7 @@ header nav {
   height: var(--nav-height);
   padding: 0 24px;
   font-family: var(--body-font-family);
+  color: var(--color-white);
 }
 
 header nav[aria-expanded='true'] {
@@ -69,7 +70,7 @@ header nav .nav-hamburger button {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background-color: transparent;
   color: inherit;
   overflow: initial;
   text-overflow: initial;
@@ -146,8 +147,11 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 96px;
   height: auto;
+
+  /* render the dark brand SVG as white over the maroon nav */
+  filter: brightness(0) invert(1);
 }
 
 /* sections */
@@ -171,7 +175,10 @@ header nav .nav-sections ul {
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 500;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -320,5 +327,18 @@ header .breadcrumbs ol li[aria-current] {
     display: block;
     max-width: 1264px;
     padding: 0 32px;
+  }
+}
+
+/* ===== Dr Pepper brand nav ===== */
+header nav .nav-sections a:hover {
+  color: var(--color-cream);
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  header nav .nav-sections .default-content-wrapper > ul {
+    justify-content: flex-end;
+    gap: 32px;
   }
 }

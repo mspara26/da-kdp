@@ -1,3 +1,13 @@
+/* Full-bleed: carousel spans the entire viewport width, no section gap */
+main > .section.carousel-container {
+  margin: 0;
+}
+
+main > .section.carousel-container > div {
+  max-width: none;
+  padding: 0;
+}
+
 .carousel .carousel-slides-container {
   position: relative;
 }
@@ -30,6 +40,7 @@
   position: relative;
   width: 100%;
   min-height: min(50vw, calc(100dvh - var(--header-height)));
+  background-color: var(--color-maroon);
 }
 
 .carousel .carousel-slide:has(.carousel-slide-content[data-align='center']) {
@@ -53,12 +64,53 @@
 
 .carousel .carousel-slide .carousel-slide-content {
   z-index: 1;
-  margin: 68px;
-  padding: 16px;
-  color: white;
-  background-color: rgba(19 19 19 / 75%);
+  margin: 32px;
+  padding: 0;
+  color: var(--color-white);
+  background-color: transparent;
   position: relative;
   width: var(--slide-content-width, auto);
+}
+
+/* Heading: large, white, uppercase, heavy */
+.carousel .carousel-slide .carousel-slide-content h1,
+.carousel .carousel-slide .carousel-slide-content h2,
+.carousel .carousel-slide .carousel-slide-content h3 {
+  margin: 0 0 0.5em;
+  color: var(--color-white);
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.carousel .carousel-slide .carousel-slide-content p {
+  margin: 0 0 1rem;
+  color: var(--color-white);
+  font-size: var(--body-font-size-m);
+  line-height: 1.4;
+}
+
+/* White pill CTA, maroon text — matches original */
+.carousel .carousel-slide .carousel-slide-content p.button-container {
+  margin-top: 1.5rem;
+}
+
+.carousel .carousel-slide .carousel-slide-content a.button,
+.carousel .carousel-slide .carousel-slide-content a.button:any-link {
+  background-color: var(--color-white);
+  color: var(--color-maroon);
+  border: 2px solid var(--color-white);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.7em 1.8em;
+}
+
+.carousel .carousel-slide .carousel-slide-content a.button:hover,
+.carousel .carousel-slide .carousel-slide-content a.button:focus {
+  background-color: var(--color-cream);
+  color: var(--color-maroon);
+  border-color: var(--color-cream);
 }
 
 .carousel .carousel-slide-indicators {

@@ -31,3 +31,75 @@
     order: unset;
   }
 }
+
+/* ===== Dr Pepper columns brand styling ===== */
+
+/* Buttons use the brand heading font, uppercase and heavy, like the source CTAs */
+.columns .button-container a.button,
+.columns .button-container a.button:any-link {
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.7em 2em;
+}
+
+/* Beige promo section: maroon heading */
+.section.warm-beige .columns h1,
+.section.warm-beige .columns h2,
+.section.warm-beige .columns h3 {
+  color: var(--color-maroon);
+}
+
+/* Dark section: light (white) button with maroon text */
+.section.dark .columns .button-container a.button,
+.section.dark .columns .button-container a.button:any-link {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-maroon);
+}
+
+.section.dark .columns .button-container a.button:hover,
+.section.dark .columns .button-container a.button:focus {
+  background-color: var(--color-cream);
+  border-color: var(--color-cream);
+  color: var(--color-maroon);
+}
+
+/* Full-bleed: columns sections span the entire viewport width */
+main > .section.columns-container > div {
+  max-width: none;
+  padding: 0;
+}
+
+/* Full-bleed columns: image flush to edge, text inset from the edge */
+@media (width >= 900px) {
+  main > .section.columns-container .columns > div {
+    gap: 0;
+    align-items: center;
+  }
+
+  main > .section.columns-container .columns > div > div:not(.columns-img-col) {
+    padding: 48px 64px;
+  }
+
+  /* Merch promo: 42% text / 58% image, matching the original */
+  main > .section.warm-beige .columns > div > div:not(.columns-img-col) {
+    flex: 0 0 42%;
+  }
+
+  main > .section.warm-beige .columns > div > .columns-img-col {
+    flex: 0 0 58%;
+  }
+
+  /* Image fills the column width at its natural aspect ratio (no crop/stretch) */
+  main > .section.columns-container .columns > div > .columns-img-col picture {
+    display: block;
+  }
+
+  main > .section.columns-container .columns > div > .columns-img-col img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "sites": {
+    "da-kdp": {
+      "previewOrg": "mspara26",
+      "previewSite": "da-kdp",
+      "contentHostUrl": "https://content.da.live/mspara26/da-kdp/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  },
+  "type": "da"
+}

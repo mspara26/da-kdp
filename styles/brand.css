@@ -1,0 +1,30 @@
+:root {
+  /* Brand fonts (Adobe Fonts kit gwz6erc) */
+  --heading-font-family: "aktiv-grotesk-extended", "aktiv-grotesk", arial, sans-serif;
+  --body-font-family: "aktiv-grotesk", arial, sans-serif;
+
+  /* Brand colors */
+  --background-color: #fff;
+  --text-color: rgb(0 0 0 / 80%);
+  --link-color: rgb(144 13 44);
+  --link-hover-color: rgb(107 10 33);
+
+  /* Brand palette */
+  --color-maroon: rgb(144 13 44);
+  --color-maroon-dark: rgb(107 10 33);
+  --color-cream: #eedcd1;
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Spacing */
+  --section-padding: 3.75rem;
+  --nav-height: 75px;
+
+  /* Heading sizes */
+  --heading-size-xxl: 48px;
+  --heading-size-xl: 40px;
+  --heading-size-l: 32px;
+  --heading-size-m: 24px;
+  --heading-size-s: 20px;
+  --heading-size-xs: 18px;
+}

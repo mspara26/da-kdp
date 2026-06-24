@@ -24,6 +24,9 @@ import {
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const picture = main.querySelector('picture');
+  // Skip auto-hero when the heading/picture already belong to an authored block
+  // (e.g. carousel) — otherwise their content gets duplicated into a stray hero.
+  if (h1 && h1.closest('[class].block, .carousel, .columns')) return;
   // eslint-disable-next-line no-bitwise
   if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
     const section = document.createElement('div');

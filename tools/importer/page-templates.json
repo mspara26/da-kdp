@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://www.drpepper.com/"
+      ],
+      "representativeUrl": "https://www.drpepper.com/",
+      "coverageGaps": [],
+      "description": "Dr Pepper homepage: hero carousel (2 slides), summer merch two-column promo, and a dark 'Love Dr Pepper?' content block.",
+      "blocks": [
+        {
+          "name": "carousel",
+          "instances": [
+            "section.dp-carousel"
+          ]
+        },
+        {
+          "name": "columns",
+          "instances": [
+            "section.dp-promo",
+            "section.dp-content-block"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "hero-carousel",
+          "name": "Hero Carousel",
+          "selector": "section.dp-carousel",
+          "style": null,
+          "blocks": ["carousel"],
+          "defaultContent": []
+        },
+        {
+          "id": "summer-promo",
+          "name": "Summer Merch Promo",
+          "selector": "section.dp-promo",
+          "style": "warm-beige",
+          "blocks": ["columns"],
+          "defaultContent": []
+        },
+        {
+          "id": "love-drpepper",
+          "name": "Love Dr Pepper Content Block",
+          "selector": "section.dp-content-block",
+          "style": "dark",
+          "blocks": ["columns"],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}
